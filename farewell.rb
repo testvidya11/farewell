@@ -1,7 +1,7 @@
 KEY = "i hope in the next ten years there would be no other farewell letter brilliant than this one"
 
-def decrypt(file)
-  encrypted = File.read(ARGV[0]).split(",")
+def decrypt(content)
+  encrypted = content.split(",")
   decrypted = []
 
   encrypted.each_with_index do |c, i|
@@ -11,4 +11,4 @@ def decrypt(file)
   decrypted.pack("c*")
 end
 
-puts decrypt ARGV[0]
+puts decrypt File.read(ARGV[0])
