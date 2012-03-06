@@ -1,7 +1,7 @@
 KEY = "i hope in the next ten years there would be no other farewell letter brilliant than this one"
 
 def decrypt(content)
-  encrypted = content.split(",")
+  encrypted = content.gsub!(/\s/, "").split(",")
   decrypted = []
 
   encrypted.each_with_index do |c, i|

@@ -1,9 +1,9 @@
-import sys
+import sys, re
 
 key = "i hope in the next ten years there would be no other farewell letter brilliant than this one"
 
 def decrypt(content):
-    encrypted = content.split(",")
+    encrypted = re.sub("\s", "", content).split(",")
     decrypted = "".join([chr(int(encrypted[i]) ^ ord(key[i % len(key)])) for i in range(len(encrypted))])
     return decrypted
 
