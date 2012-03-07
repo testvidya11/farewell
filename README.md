@@ -29,3 +29,6 @@ but it's all up to you.
 2. `./farewell </path/to/encrypted/file>`
 
 ## farewell.java
+
+1. `javac Farewell.java`
+2. `java Farewell </path/to/encrypted/file>`
