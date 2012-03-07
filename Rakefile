@@ -23,7 +23,8 @@ task :default do
    :farewell_scala,
    :farewell_c,
    :farewell_haskell,
-   :farewell_perl].each do |task|
+   :farewell_perl,
+   :farewell_js].each do |task|
     Rake::Task[task].invoke
   end
 end
@@ -75,4 +76,10 @@ desc "Perl Version"
 task :farewell_perl => :encrypt do
   `perl farewell.pl #{REDIRECT}`
   complain? "perl"
+end
+
+desc "NodeJS Version"
+task :farewell_js => :encrypt do
+  `node farewell.js #{REDIRECT}`
+  complain? "javascript"
 end
