@@ -15,6 +15,13 @@ from command line, that is a file path, and the file contains encrypted content.
 output is purely string to stdout, so you can read it in terminal or redirect it to file,
 but it's all up to you.
 
+## One Shot
+
+`rake`
+
+> This will use README.md as input, encrypt into README.md.enc, then decrypt to README.md.dec,
+and finally compare README.md with README.md.dec.
+
 ## farewell.rb
 
 `ruby farewell.rb </path/to/encrypted/file>`
