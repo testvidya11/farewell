@@ -1,3 +1,5 @@
+#!/usr/bin/evn python
+
 import sys, re
 
 key = "i hope in the next ten years there would be no other farewell letter brilliant than this one"

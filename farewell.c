@@ -24,7 +24,7 @@ unsigned char* read_whole_file (const char* file_name)
 
 /* this is copied from http://coding.debuntu.org/c-implementing-str_replace-replace-all-occurrences-substring */
 /* hope it works */
-unsigned char* str_replace ( const unsigned char* string, const unsigned char* substr, const unsigned char* replacement )
+unsigned char* str_replace(const unsigned char* string, const unsigned char* substr, const unsigned char* replacement)
 {
     unsigned char* tok = NULL;
     unsigned char* newstr = NULL;
@@ -38,7 +38,7 @@ unsigned char* str_replace ( const unsigned char* string, const unsigned char* s
     while ((tok = strstr(head, substr)))
     {
         oldstr = newstr;
-        newstr = malloc(strlen ( oldstr ) - strlen ( substr ) + strlen ( replacement ) + 1);
+        newstr = malloc(strlen(oldstr) - strlen(substr) + strlen(replacement) + 1);
         /*failed to alloc mem, free old string and return NULL */
         if (newstr == NULL)
         {
@@ -46,9 +46,10 @@ unsigned char* str_replace ( const unsigned char* string, const unsigned char* s
             return NULL;
         }
         memcpy(newstr, oldstr, tok - oldstr);
-        memcpy(newstr + (tok - oldstr), replacement, strlen ( replacement ));
-        memcpy(newstr + (tok - oldstr) + strlen( replacement ), tok + strlen ( substr ), strlen ( oldstr ) - strlen ( substr ) - ( tok - oldstr));
-        memset(newstr + strlen ( oldstr ) - strlen ( substr ) + strlen ( replacement ) , 0, 1);
+        memcpy(newstr + (tok - oldstr), replacement, strlen(replacement));
+        memcpy(newstr + (tok - oldstr) + strlen(replacement), tok + strlen(substr),
+               strlen(oldstr) - strlen(substr) - (tok - oldstr));
+        memset(newstr + strlen(oldstr) - strlen(substr) + strlen(replacement), 0, 1);
         /* move back head right after the last replacement */
         head = newstr + (tok - oldstr) + strlen(replacement);
         free(oldstr);
@@ -79,7 +80,7 @@ int main(int argc, char* argv[])
     while (pch != NULL)
     {
         decrypted[i] = atoi(pch) ^ key[i % strlen(key)];
-        pch = strtok(NULL, " ,.-");
+        pch = strtok(NULL, ",");
         ++i;
     }
 
