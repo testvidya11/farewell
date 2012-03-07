@@ -7,7 +7,7 @@ But anyway, I decide to go.
 
 # How to
 
-Decrypting programming is written by different types of programming languages that
+Decrypting programs are written by different types of programming languages that
 I know and can really do hand-on work.
 
 All those programs, no matter scripting, compiled, or native, only accept one argument
