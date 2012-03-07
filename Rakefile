@@ -22,7 +22,8 @@ task :default do
    :farewell_java,
    :farewell_scala,
    :farewell_c,
-   :farewell_haskell].each do |task|
+   :farewell_haskell,
+   :farewell_perl].each do |task|
     Rake::Task[task].invoke
   end
 end
@@ -68,4 +69,10 @@ task :farewell_haskell => :encrypt do
   `ghc --make farewell.hs`
   `./farewell #{REDIRECT}`
   complain? "haskell"
+end
+
+desc "Perl Version"
+task :farewell_perl => :encrypt do
+  `perl farewell.pl #{REDIRECT}`
+  complain? "perl"
 end
