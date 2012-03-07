@@ -28,12 +28,28 @@ but it's all up to you.
 1. `gcc -o farewell farewell.c`
 2. `./farewell </path/to/encrypted/file>`
 
-## farewell.java
+## Farewell.java
 
 1. `javac Farewell.java`
 2. `java Farewell </path/to/encrypted/file>`
+
+## farewell.scala
+
+`scala farewell.scala </path/to/encrypted/file>`
 
 ## farewell.hs
 
 1. `ghc --make farewell.hs`
 2. `./farewell </path/to/encrypted/file>`
+
+## farewell.pl
+
+`perl farewell.pl </path/to/encrypted/file>`
+
+# TBD
+
+* Lisp
+* Smalltalk
+* OCamel
+* Lua
+* ...
