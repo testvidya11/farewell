@@ -1,0 +1,7 @@
+*.enc
+*.dec
+*.class
+*.pyc
+farewell
+*.o
+*.hi

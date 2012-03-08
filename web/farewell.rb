@@ -1,4 +1,4 @@
-#!/usr/bin/evn ruby
+require 'sinatra'
 
 KEY = "i hope in the next ten years there would be no other farewell letter brilliant than this one"
 
@@ -13,4 +13,11 @@ def decrypt(content)
   decrypted.pack("c*")
 end
 
-puts decrypt File.read(ARGV[0])
+get '/' do 
+  erb :index
+end
+
+post '/' do
+  @decrypted = decrypt(params[:encrypted]).gsub("\n", "<br />")
+  erb :decrypted
+end
