@@ -1,6 +1,6 @@
 .header-image {
   background-image: url('../img/banner.jpg');
-  height: 150px;
+  height: 188px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -10,5 +10,5 @@
 }
 
 .form-horizontal .form-actions {
-  padding-left: 0;
+  padding-left: 10px;
 }
