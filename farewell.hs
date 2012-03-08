@@ -16,6 +16,6 @@ decrypt key index encrypted decrypted = do
 main = do
   [f] <- getArgs
   content <- readFile f
-  let encrypted = splitRegex (mkRegex ",") (subRegex (mkRegex "[\n\t ]") content "")
+  let encrypted = splitRegex (mkRegex ",") (subRegex (mkRegex "[\n\r\t ]") content "")
   let key = "i hope in the next ten years there would be no other farewell letter brilliant than this one"
   putStr (decrypt key 0 encrypted [])

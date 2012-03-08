@@ -69,6 +69,9 @@ int main(int argc, char* argv[])
     tmp = str_replace(content, "\t", "");
     free(content);
     content = tmp;
+    tmp = str_replace(content, "\r", "");
+    free(content);
+    content = tmp;
     tmp = str_replace(content, " ", "");
     free(content);
     content = tmp;

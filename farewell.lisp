@@ -31,7 +31,7 @@ is replaced with replacement."
                                              collect line)))))
   (let ((encrypted (split-by (replace-all
                     (replace-all
-                     (replace-all content "\n" "")
+                     (replace-all (replace-all content "\r" "") "\n" "")
                      "\t" "")
                     " " "") #\,)))
     (setq key "i hope in the next ten years there would be no other farewell letter brilliant than this one")
