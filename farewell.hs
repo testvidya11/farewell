@@ -5,8 +5,6 @@ import Text.Regex (mkRegex, subRegex, splitRegex)
 import Char (ord, chr)
 import Bits (xor)
 
-main :: IO ()
-
 decrypt key index encrypted decrypted = do
   if null encrypted
      then decrypted
