@@ -53,9 +53,13 @@ and finally compare README.md with README.md.dec.
 
 `perl farewell.pl </path/to/encrypted/file>`
 
+# Web Version
+
+1. `bundle install`
+2. `rackup -s thin`
+
 # TBD
 
-* NodeJS
 * Lisp
 * Smalltalk
 * OCamel
