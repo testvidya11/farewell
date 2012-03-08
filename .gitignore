@@ -5,3 +5,4 @@
 farewell
 *.o
 *.hi
+*.beam
