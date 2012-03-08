@@ -64,8 +64,8 @@ and finally compare README.md with README.md.dec.
 
 # TBD
 
-* Lisp
 * Smalltalk
 * OCamel
 * Lua
+* Erlang
 * ...
