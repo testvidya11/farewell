@@ -1,4 +1,4 @@
-#!/usr/bin/evn clisp
+#!/usr/bin/env clisp
 
 ;; copied from http://cl-cookbook.sourceforge.net/strings.html
 (defun replace-all (string part replacement &key (test #'char=))
