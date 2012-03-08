@@ -14,6 +14,12 @@ def decrypt(content)
   decrypted.pack("c*")
 end
 
+helpers do
+  def include(file)
+    ERB.new(File.read("views/#{file}")).result(binding)
+  end
+end
+
 get '/' do 
   erb :index
 end
