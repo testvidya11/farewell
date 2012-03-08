@@ -53,6 +53,10 @@ and finally compare README.md with README.md.dec.
 
 `perl farewell.pl </path/to/encrypted/file>`
 
+## farewell.lisp
+
+`clisp farewell.lisp </path/to/encrypted/file>`
+
 # Web Version
 
 1. `bundle install`

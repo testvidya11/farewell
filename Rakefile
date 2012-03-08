@@ -24,7 +24,8 @@ task :default do
    :farewell_c,
    :farewell_haskell,
    :farewell_perl,
-   :farewell_js].each do |task|
+   :farewell_js,
+   :farewell_lisp].each do |task|
     Rake::Task[task].invoke
   end
 end
@@ -82,4 +83,10 @@ desc "NodeJS Version"
 task :farewell_js => :encrypt do
   `node farewell.js #{REDIRECT}`
   complain? "javascript"
+end
+
+desc "Common Lisp Version"
+task :farewell_lisp => :encrypt do
+  `clisp farewell.lisp #{REDIRECT}`
+  complain? "lisp"
 end
