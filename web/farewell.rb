@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'redcarpet'
 
 KEY = "i hope in the next ten years there would be no other farewell letter brilliant than this one"
 
@@ -18,6 +19,10 @@ get '/' do
 end
 
 post '/' do
-  @decrypted = decrypt(params[:encrypted]).gsub("\n", "<br />")
+  tmp = decrypt(params[:encrypted])
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+                                     :autolink => true,
+                                     :space_after_headers => true)
+  @decrypted = markdown.render(tmp)
   erb :decrypted
 end
