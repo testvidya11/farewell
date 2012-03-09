@@ -6,3 +6,4 @@ farewell
 *.o
 *.hi
 *.beam
+*.dump

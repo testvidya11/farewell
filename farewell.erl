@@ -3,4 +3,5 @@
 
 start(File) ->
     {ok, Content} = file:read_file(File),
-    io:fwrite(Content).
+    Decrypted = re:split(re:replace(Content, "[\n\r\t ]", "", [{return,list},global]), ",", [{return,list}]),
+    io:fwrite(Decrypted).
