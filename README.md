@@ -62,6 +62,10 @@ and finally compare README.md with README.md.dec.
 `erlc farewell.erl`
 `erl -noshell -s farewell say </path/to/encrypted/file> -s init stop`
 
+## farewell.lua
+
+`lua farewell.lua </path/to/encrypted/file>`
+
 # Web Version
 
 1. `bundle install`
@@ -71,5 +75,4 @@ and finally compare README.md with README.md.dec.
 
 * Smalltalk
 * OCamel
-* Lua
 * ...

@@ -28,7 +28,8 @@ task :default do
    :farewell_perl,
    :farewell_js,
    :farewell_lisp,
-   :farewell_erlang].each do |task|
+   :farewell_erlang,
+   :farewell_lua].each do |task|
     Rake::Task[task].invoke
   end
 end
@@ -99,4 +100,10 @@ task :farewell_erlang => :encrypt do
   `erlc farewell.erl`
   `erl -noshell -s farewell say README.md.enc -s init stop > README.md.dec`
   complain? "erlang"
+end
+
+desc "Lua Version"
+task :farewell_lua => :encrypt do
+  `lua farewell.lua #{REDIRECT}`
+  complain? "lisp"
 end

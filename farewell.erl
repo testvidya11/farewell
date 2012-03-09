@@ -10,7 +10,7 @@ decrypt(Key, Index, Encrypted, Decrypted) when Encrypted =/= [] ->
 say(File) ->
     {ok, Content} = file:read_file(File),
     Encrypted = re:split(re:replace(Content,
-                                    "[\n\r\t ]", "",
+                                    "\\s", "",
                                     [{return, list}, global]),
                          ",", [{return, list}]),
     io:fwrite(decrypt("i hope in the next ten years there would be no other farewell letter brilliant than this one",
