@@ -6,6 +6,8 @@ CLEAN.include('*.pyc')
 CLEAN.include('*.class')
 CLEAN.include('*.dec')
 CLEAN.include('*.enc')
+CLEAN.include('*.dump')
+CLEAN.include('*.beam')
 CLEAN.include('farewell')
 
 DIFF_COMMAND = "diff -u README.md README.md.dec 2>&1"
