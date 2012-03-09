@@ -57,6 +57,11 @@ and finally compare README.md with README.md.dec.
 
 `clisp farewell.lisp </path/to/encrypted/file>`
 
+## farewell.erl
+
+`erlc farewell.erl`
+`erl -noshell -s farewell say </path/to/encrypted/file> -s init stop`
+
 # Web Version
 
 1. `bundle install`
@@ -67,5 +72,4 @@ and finally compare README.md with README.md.dec.
 * Smalltalk
 * OCamel
 * Lua
-* Erlang
 * ...

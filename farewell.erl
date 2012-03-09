@@ -1,7 +1,17 @@
 -module(farewell).
--export([start/1]).
+-export([say/1]).
 
-start(File) ->
+decrypt(_, _, [], Decrypted) -> Decrypted;
+decrypt(Key, Index, Encrypted, Decrypted) when Encrypted =/= [] ->
+    decrypt(Key, Index + 1, tl(Encrypted),
+            Decrypted ++
+            [(lists:nth((Index rem length(Key)) + 1, Key) bxor list_to_integer(hd(Encrypted)))]).
+
+say(File) ->
     {ok, Content} = file:read_file(File),
-    Decrypted = re:split(re:replace(Content, "[\n\r\t ]", "", [{return,list},global]), ",", [{return,list}]),
-    io:fwrite(Decrypted).
+    Encrypted = re:split(re:replace(Content,
+                                    "[\n\r\t ]", "",
+                                    [{return, list}, global]),
+                         ",", [{return, list}]),
+    io:fwrite(decrypt("i hope in the next ten years there would be no other farewell letter brilliant than this one",
+                      0, Encrypted, [])).

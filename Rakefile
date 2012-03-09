@@ -25,7 +25,8 @@ task :default do
    :farewell_haskell,
    :farewell_perl,
    :farewell_js,
-   :farewell_lisp].each do |task|
+   :farewell_lisp,
+   :farewell_erlang].each do |task|
     Rake::Task[task].invoke
   end
 end
@@ -89,4 +90,11 @@ desc "Common Lisp Version"
 task :farewell_lisp => :encrypt do
   `clisp farewell.lisp #{REDIRECT}`
   complain? "lisp"
+end
+
+desc "Erlang Version"
+task :farewell_erlang => :encrypt do
+  `erlc farewell.erl`
+  `erl -noshell -s farewell say README.md.enc -s init stop > README.md.dec`
+  complain? "erlang"
 end
