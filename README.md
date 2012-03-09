@@ -73,6 +73,7 @@ and finally compare README.md with README.md.dec.
 
 # TBD
 
+* Groovy
 * Smalltalk
 * OCamel
 * ...

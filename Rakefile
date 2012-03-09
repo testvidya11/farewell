@@ -29,7 +29,8 @@ task :default do
    :farewell_js,
    :farewell_lisp,
    :farewell_erlang,
-   :farewell_lua].each do |task|
+   :farewell_lua,
+   :farewell_groovy].each do |task|
     Rake::Task[task].invoke
   end
 end
@@ -105,5 +106,11 @@ end
 desc "Lua Version"
 task :farewell_lua => :encrypt do
   `lua farewell.lua #{REDIRECT}`
-  complain? "lisp"
+  complain? "lua"
+end
+
+desc "Groovy Version"
+task :farewell_groovy => :encrypt do
+  `groovy farewell.groovy #{REDIRECT}`
+  complain? "groovy"
 end
