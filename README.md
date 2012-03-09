@@ -66,6 +66,10 @@ and finally compare README.md with README.md.dec.
 
 `lua farewell.lua </path/to/encrypted/file>`
 
+## farewell.sj
+
+`sh farewell.sh </path/to/encrypted/file>`
+
 # Web Version
 
 1. `bundle install`

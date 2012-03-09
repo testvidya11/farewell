@@ -30,7 +30,11 @@ task :default do
    :farewell_lisp,
    :farewell_erlang,
    :farewell_lua,
-   :farewell_groovy].each do |task|
+   :farewell_groovy,
+   :farewell_sh].each do |task|
+    Rake::Task[:encrypt].reenable
+    Rake::Task[:clean].reenable
+
     Rake::Task[task].invoke
   end
 end
@@ -113,4 +117,10 @@ desc "Groovy Version"
 task :farewell_groovy => :encrypt do
   `groovy farewell.groovy #{REDIRECT}`
   complain? "groovy"
+end
+
+desc "Shell Version"
+task :farewell_sh => :encrypt do
+  `sh farewell.sh #{REDIRECT}`
+  complain? "sh"
 end
