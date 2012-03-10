@@ -66,7 +66,7 @@ and finally compare README.md with README.md.dec.
 
 `lua farewell.lua </path/to/encrypted/file>`
 
-## farewell.sj
+## farewell.sh
 
 `sh farewell.sh </path/to/encrypted/file>`
 
