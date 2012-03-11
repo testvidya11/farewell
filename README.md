@@ -72,8 +72,8 @@ and finally compare README.md with README.md.dec.
 
 ## farewell.cs
 
-`gmcs farewell.cs`
-`mono farewell.exe </path/to/encrypted/file>`
+`gmcs Farewell.cs`
+`mono Farewell.exe </path/to/encrypted/file>`
 
 # Web Version
 
@@ -82,6 +82,9 @@ and finally compare README.md with README.md.dec.
 
 # TBD
 
+* VB
 * OCamel
 * Smalltalk
+* Pascal
+* Delphi
 * ...

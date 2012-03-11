@@ -9,7 +9,7 @@ CLEAN.include('*.enc')
 CLEAN.include('*.dump')
 CLEAN.include('*.beam')
 CLEAN.include('farewell')
-CLEAN.include('farewell.exe')
+CLEAN.include('Farewell.exe')
 
 DIFF_COMMAND = "diff -u README.md README.md.dec 2>&1"
 REDIRECT = "README.md.enc > README.md.dec"
@@ -129,7 +129,7 @@ end
 
 desc "Csharp Version"
 task :farewell_cs => :encrypt do
-  `gmcs farewell.cs`
-  `mono farewell.exe #{REDIRECT}`
+  `gmcs Farewell.cs`
+  `mono Farewell.exe #{REDIRECT}`
   complain? "csharp"
 end
