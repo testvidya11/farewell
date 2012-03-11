@@ -15,7 +15,7 @@ DIFF_COMMAND = "diff -u README.md README.md.dec 2>&1"
 REDIRECT = "README.md.enc > README.md.dec"
 
 def complain?(which)
-  puts "#{which} version sucks" unless `#{DIFF_COMMAND}`.empty?  
+  fail "#{which} version sucks" unless `#{DIFF_COMMAND}`.empty?  
 end
 
 desc "One Shot"
@@ -124,7 +124,7 @@ end
 
 desc "Shell Version"
 task :farewell_sh => :encrypt do
-  `sh farewell.sh #{REDIRECT}`
+  `bash farewell.sh #{REDIRECT}`
   complain? "sh"
 end
 

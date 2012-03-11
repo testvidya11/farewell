@@ -10,10 +10,10 @@ function split(str, pat)
       if s ~= 1 or cap ~= "" then
 	 table.insert(t,cap)
       end
-      last_end = e+1
+      last_end = e + 1
       s, e, cap = str:find(fpat, last_end)
    end
-   if last_end <= #str then
+   if last_end <= string.len(str) then
       cap = str:sub(last_end)
       table.insert(t, cap)
    end

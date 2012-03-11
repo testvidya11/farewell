@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 chr() {
   printf \\$(printf '%03o' $1)
