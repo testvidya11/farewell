@@ -13,7 +13,7 @@ function split(str, pat)
       last_end = e + 1
       s, e, cap = str:find(fpat, last_end)
    end
-   if last_end <= string.len(str) then
+   if last_end <= #str then
       cap = str:sub(last_end)
       table.insert(t, cap)
    end
