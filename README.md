@@ -70,9 +70,14 @@ and finally compare README.md with README.md.dec.
 
 `sh farewell.sh </path/to/encrypted/file>`
 
-## farewell.cs
+## Farewell.cs
 
 `gmcs Farewell.cs`
+`mono Farewell.exe </path/to/encrypted/file>`
+
+## Farewell.vb
+
+`vbnc Farewell.vb`
 `mono Farewell.exe </path/to/encrypted/file>`
 
 # Web Version

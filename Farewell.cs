@@ -15,7 +15,7 @@ public class HelloWorld
 
         for (int i = 0; i < encrypted.Length; ++i)
         {
-            decrypted.Append((char) (Int32.Parse(encrypted[i]) ^ (char) key[i % key.Length]));
+            decrypted.Append((char) (Int32.Parse(encrypted[i]) ^ key[i % key.Length]));
         }
 
         Console.Write(decrypted);

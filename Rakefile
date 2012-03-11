@@ -33,7 +33,8 @@ task :default do
    :farewell_lua,
    :farewell_groovy,
    :farewell_sh,
-   :farewell_cs].each do |task|
+   :farewell_cs,
+   :farewell_vb].each do |task|
     Rake::Task[:encrypt].reenable
     Rake::Task[:clean].reenable
 
@@ -132,4 +133,11 @@ task :farewell_cs => :encrypt do
   `gmcs Farewell.cs`
   `mono Farewell.exe #{REDIRECT}`
   complain? "csharp"
+end
+
+desc "VB Version"
+task :farewell_vb => :encrypt do
+  `vbnc Farewell.vb`
+  `mono Farewell.exe #{REDIRECT}`
+  complain? "vb"
 end
