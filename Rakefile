@@ -9,6 +9,7 @@ CLEAN.include('*.enc')
 CLEAN.include('*.dump')
 CLEAN.include('*.beam')
 CLEAN.include('farewell')
+CLEAN.include('farewell.exe')
 
 DIFF_COMMAND = "diff -u README.md README.md.dec 2>&1"
 REDIRECT = "README.md.enc > README.md.dec"
@@ -31,7 +32,8 @@ task :default do
    :farewell_erlang,
    :farewell_lua,
    :farewell_groovy,
-   :farewell_sh].each do |task|
+   :farewell_sh,
+   :farewell_cs].each do |task|
     Rake::Task[:encrypt].reenable
     Rake::Task[:clean].reenable
 
@@ -123,4 +125,11 @@ desc "Shell Version"
 task :farewell_sh => :encrypt do
   `sh farewell.sh #{REDIRECT}`
   complain? "sh"
+end
+
+desc "Csharp Version"
+task :farewell_cs => :encrypt do
+  `gmcs farewell.cs`
+  `mono farewell.exe #{REDIRECT}`
+  complain? "csharp"
 end

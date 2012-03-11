@@ -70,6 +70,11 @@ and finally compare README.md with README.md.dec.
 
 `sh farewell.sh </path/to/encrypted/file>`
 
+## farewell.cs
+
+`gmcs farewell.cs`
+`mono farewell.exe </path/to/encrypted/file>`
+
 # Web Version
 
 1. `bundle install`
