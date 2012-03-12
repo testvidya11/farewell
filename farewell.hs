@@ -9,7 +9,7 @@ decrypt key index encrypted decrypted = do
   if null encrypted
      then decrypted
      else decrypt key (index + 1) (tail encrypted)
-          (decrypted ++ [chr (xor (read (head encrypted) :: Int) (ord ((!!) key (mod index (length key)))))])
+          (decrypted ++ [chr (xor (read (head encrypted) :: Int) (ord (key !! (mod index (length key)))))])
 
 main = do
   [f] <- getArgs
