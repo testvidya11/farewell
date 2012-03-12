@@ -5,11 +5,9 @@ import Text.Regex (mkRegex, subRegex, splitRegex)
 import Char (ord, chr)
 import Bits (xor)
 
-decrypt key index encrypted decrypted = do
-  if null encrypted
-     then decrypted
-     else decrypt key (index + 1) (tail encrypted)
-          (decrypted ++ [chr (xor (read (head encrypted) :: Int) (ord (key !! (mod index (length key)))))])
+decrypt _ _ [] decrypted = decrypted
+decrypt key index encrypted decrypted = decrypt key (index + 1) (tail encrypted)
+    (decrypted ++ [chr (xor (read (head encrypted) :: Int) (ord (key !! (mod index (length key)))))])
 
 main = do
   [f] <- getArgs
