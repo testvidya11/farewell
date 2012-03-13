@@ -8,3 +8,5 @@ farewell
 *.beam
 *.dump
 *.exe
+*.cmi
+*.cmo

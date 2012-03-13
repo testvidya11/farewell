@@ -59,8 +59,8 @@ and finally compare README.md with README.md.dec.
 
 ## farewell.erl
 
-`erlc farewell.erl`
-`erl -noshell -s farewell say </path/to/encrypted/file> -s init stop`
+1. `erlc farewell.erl`
+2. `erl -noshell -s farewell say </path/to/encrypted/file> -s init stop`
 
 ## farewell.lua
 
@@ -72,13 +72,18 @@ and finally compare README.md with README.md.dec.
 
 ## Farewell.cs
 
-`gmcs Farewell.cs`
-`mono Farewell.exe </path/to/encrypted/file>`
+1. `gmcs Farewell.cs`
+2. `mono Farewell.exe </path/to/encrypted/file>`
 
 ## Farewell.vb
 
-`vbnc Farewell.vb`
-`mono Farewell.exe </path/to/encrypted/file>`
+1. `vbnc Farewell.vb`
+2. `mono Farewell.exe </path/to/encrypted/file>`
+
+## farewell.ml
+
+1. `ocamlc \`ocamlfind query extlib -i-format\` extLib.cma str.cma farewell.ml -o farewell`
+2. `./farewell </path/to/encrypted/file>`
 
 # Web Version
 
@@ -87,8 +92,6 @@ and finally compare README.md with README.md.dec.
 
 # TBD
 
-* VB
-* OCamel
 * Smalltalk
 * Pascal
 * Delphi

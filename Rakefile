@@ -8,6 +8,8 @@ CLEAN.include('*.dec')
 CLEAN.include('*.enc')
 CLEAN.include('*.dump')
 CLEAN.include('*.beam')
+CLEAN.include('*.cmi')
+CLEAN.include('*.cmo')
 CLEAN.include('farewell')
 CLEAN.include('Farewell.exe')
 
@@ -140,4 +142,11 @@ task :farewell_vb => :encrypt do
   `vbnc Farewell.vb`
   `mono Farewell.exe #{REDIRECT}`
   complain? "vb"
+end
+
+desc "OCaml Version"
+task :farewell_ocaml => :encrypt do
+  `ocamlc #{`ocamlfind query extlib -i-format`.strip} extLib.cma str.cma farewell.ml -o farewell`
+  `./farewell #{REDIRECT}`
+  complain? "ocaml"
 end
