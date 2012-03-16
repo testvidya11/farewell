@@ -5,10 +5,10 @@ before_install:
   - sudo add-apt-repository ppa:cz.nic-labs/golang
   - sudo apt-get update
   - sudo apt-get -y install build-essential
+  - sudo apt-get -y --no-install-recommends install golang-go
   - sudo apt-get -y install openjdk-6-jdk scala groovy
   - sudo apt-get -y install mono-runtime mono-gmcs mono-vbnc
   - sudo apt-get -y install haskell-platform erlang nodejs clisp lua5.1 ocaml ocaml-findlib libextlib-ocaml libextlib-ocaml-dev
-  - sudo apt-get -y --no-install-recommends install golang-go
 branches:
   only:
     - master
