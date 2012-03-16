@@ -10,6 +10,7 @@ CLEAN.include('*.dump')
 CLEAN.include('*.beam')
 CLEAN.include('*.cmi')
 CLEAN.include('*.cmo')
+CLEAN.include('*.6')
 CLEAN.include('farewell')
 CLEAN.include('Farewell.exe')
 
@@ -36,7 +37,8 @@ task :default do
    :farewell_groovy,
    :farewell_sh,
    :farewell_cs,
-   :farewell_vb].each do |task|
+   :farewell_vb,
+   :farewell_go].each do |task|
     Rake::Task[:encrypt].reenable
     Rake::Task[:clean].reenable
 
@@ -149,4 +151,12 @@ task :farewell_ocaml => :encrypt do
   `ocamlc #{`ocamlfind query extlib -i-format`.strip} extLib.cma str.cma farewell.ml -o farewell`
   `./farewell #{REDIRECT}`
   complain? "ocaml"
+end
+
+desc "Go Version"
+task :farewell_go => :encrypt do
+  `6g farewell.go`
+  `6l -o farewell farewell.6`
+  `./farewell #{REDIRECT}`
+  complain? "go"
 end

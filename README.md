@@ -85,6 +85,12 @@ and finally compare README.md with README.md.dec.
 1. ``ocamlc `ocamlfind query extlib -i-format` extLib.cma str.cma farewell.ml -o farewell``
 2. `./farewell </path/to/encrypted/file>`
 
+## farewell.go
+
+1. `6g farewell.go`
+2. `6l -o farewell farewell.6`
+3. `./farewell </path/to/encrypted/file>`
+
 # Web Version
 
 1. `bundle install`
