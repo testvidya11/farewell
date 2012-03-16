@@ -10,7 +10,7 @@ CLEAN.include('*.dump')
 CLEAN.include('*.beam')
 CLEAN.include('*.cmi')
 CLEAN.include('*.cmo')
-CLEAN.include('*.6')
+CLEAN.include('*.togo')
 CLEAN.include('farewell')
 CLEAN.include('Farewell.exe')
 
@@ -156,8 +156,8 @@ end
 desc "Go Version"
 task :farewell_go => :encrypt do
   compiler, linker = if RUBY_PLATFORM =~ /^x86_64.+/; %w{6g 6l} else %w{8g 8l} end
-  `#{compiler} farewell.go`
-  `#{linker} -o farewell farewell.6`
+  `#{compiler} -o farewell.togo farewell.go`
+  `#{linker} -o farewell farewell.togo`
   `./farewell #{REDIRECT}`
   complain? "go"
 end
