@@ -155,8 +155,9 @@ end
 
 desc "Go Version"
 task :farewell_go => :encrypt do
-  `6g farewell.go`
-  `6l -o farewell farewell.6`
+  compiler, linker = if RUBY_PLATFORM =~ /^x86_64.+/; %w{6g 6l} else %w{8g 8l} end
+  `#{compiler} farewell.go`
+  `#{linker} -o farewell farewell.6`
   `./farewell #{REDIRECT}`
   complain? "go"
 end
