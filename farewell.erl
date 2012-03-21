@@ -2,7 +2,7 @@
 -export([say/1]).
 
 decrypt(_, _, [], Decrypted) -> Decrypted;
-decrypt(Key, Index, Encrypted, Decrypted) when Encrypted =/= [] ->
+decrypt(Key, Index, Encrypted, Decrypted) ->
     decrypt(Key, Index + 1, tl(Encrypted),
             Decrypted ++
             [(lists:nth((Index rem length(Key)) + 1, Key) bxor list_to_integer(hd(Encrypted)))]).
