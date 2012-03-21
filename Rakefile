@@ -1,18 +1,4 @@
-require 'rake/clean'
-
-CLEAN.include('*.o')
-CLEAN.include('*.hi')
-CLEAN.include('*.pyc')
-CLEAN.include('*.class')
-CLEAN.include('*.dec')
-CLEAN.include('*.enc')
-CLEAN.include('*.dump')
-CLEAN.include('*.beam')
-CLEAN.include('*.cmi')
-CLEAN.include('*.cmo')
-CLEAN.include('*.togo')
-CLEAN.include('farewell')
-CLEAN.include('Farewell.exe')
+CLEAN = %w{*.o *.hi *.pyc *.class *.dec *.enc *.dump *.beam *.cmi *.cmo *.togo farewell Farewell.exe}
 
 DIFF_COMMAND = "diff -u README.md README.md.dec 2>&1"
 REDIRECT = "README.md.enc > README.md.dec"
@@ -21,33 +7,35 @@ def complain?(which)
   fail "#{which} version sucks" unless `#{DIFF_COMMAND}`.empty?  
 end
 
-desc "One Shot"
-task :default do
-  [:farewell_ruby,
-   :farewell_python,
-   :farewell_java,
-   :farewell_scala,
-   :farewell_c,
-   :farewell_haskell,
-   :farewell_perl,
-   :farewell_js,
-   :farewell_lisp,
-   :farewell_erlang,
-   :farewell_lua,
-   :farewell_groovy,
-   :farewell_sh,
-   :farewell_cs,
-   :farewell_vb,
-   :farewell_go].each do |task|
-    Rake::Task[:encrypt].reenable
-    Rake::Task[:clean].reenable
-
-    Rake::Task[task].invoke
-  end
+desc "Clean"
+task :clean do
+  CLEAN.each { |f| `rm -f #{f}`}
 end
+
+desc "One Shot"
+task :default =>  [:farewell_ruby,
+                   :farewell_python,
+                   :farewell_java,
+                   :farewell_scala,
+                   :farewell_c,
+                   :farewell_haskell,
+                   :farewell_perl,
+                   :farewell_js,
+                   :farewell_lisp,
+                   :farewell_erlang,
+                   :farewell_lua,
+                   :farewell_groovy,
+                   :farewell_sh,
+                   :farewell_cs,
+                   :farewell_vb,
+                   :farewell_go,
+                   :clean]
 
 task :encrypt => :clean do
   `ruby encrypt.rb README.md > README.md.enc`
+
+  Rake::Task[:encrypt].reenable
+  Rake::Task[:clean].reenable
 end
 
 desc "Ruby Version"
