@@ -98,7 +98,6 @@ and finally compare README.md with README.md.dec.
 
 # TBD
 
-* Go
 * Assembly
 * Smalltalk
 * Pascal
