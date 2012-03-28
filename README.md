@@ -1,4 +1,4 @@
-# Introduction
+# Farewell [![Build Status](https://secure.travis-ci.org/honnix/farewell.png?branch=master)](http://travis-ci.org/honnix/farewell)
 
 I'm doing something that I've never seen somebody else did. This could be very
 interesting for me and geeks, while maybe not to the other one's taste.
