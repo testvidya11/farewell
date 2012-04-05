@@ -91,6 +91,10 @@ and finally compare README.md with README.md.dec.
 2. `6l -o farewell farewell.6`
 3. `./farewell </path/to/encrypted/file>`
 
+## farewell.coffee
+
+`coffee farewell.coffee </path/to/encrypted/file>`
+
 # Web Version
 
 1. `bundle install`

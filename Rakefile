@@ -29,6 +29,7 @@ task :default =>  [:farewell_ruby,
                    :farewell_cs,
                    :farewell_vb,
                    :farewell_go,
+                   :farewell_coffee,
                    :clean]
 
 task :encrypt => :clean do
@@ -148,4 +149,10 @@ task :farewell_go => :encrypt do
   `#{linker} -o farewell farewell.togo`
   `./farewell #{REDIRECT}`
   complain? "go"
+end
+
+desc "CoffeeScript Version"
+task :farewell_coffee => :encrypt do
+  `coffee farewell.coffee #{REDIRECT}`
+  complain? "coffee"
 end
