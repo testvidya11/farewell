@@ -102,6 +102,7 @@ and finally compare README.md with README.md.dec.
 
 # TBD
 
+* F#
 * Assembly
 * Smalltalk
 * Pascal
