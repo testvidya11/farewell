@@ -12,13 +12,14 @@ before_install:
   - sudo apt-get -y install haskell-platform erlang clisp lua5.1 ocaml ocaml-findlib libextlib-ocaml libextlib-ocaml-dev
   - sudo apt-get -y install nodejs npm
   - sudo npm install -g coffee-script
+  - export CUR_DIR=$PWD
   - mkdir -p ~/bin; cd ~/bin
   - wget http://download.microsoft.com/download/6/B/6/6B6BFB83-3D3A-467C-8080-01F7A953A37F/fsharp.zip
   - unzip fsharp.zip; cd FSharp-2.0.0.0
   - chmod +x install-mono.sh
   - ./install-mono.sh
   - wget -O mono.snk http://github.com/mono/mono/raw/master/mcs/class/mono.snk
-  - sudo ./install-mono.sh
+  - sudo ./install-mono.sh; cd $CUR_DIR
 branches:
   only:
     - master

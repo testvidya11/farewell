@@ -95,6 +95,11 @@ and finally compare README.md with README.md.dec.
 
 `coffee farewell.coffee </path/to/encrypted/file>`
 
+## farewell.fs
+
+1. `fsc farewell.fs`
+2. `./farewell.exe </path/to/encrypted/file>`
+
 # Web Version
 
 1. `bundle install`
@@ -102,7 +107,6 @@ and finally compare README.md with README.md.dec.
 
 # TBD
 
-* F#
 * Assembly
 * Smalltalk
 * Pascal
