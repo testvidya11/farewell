@@ -2,13 +2,24 @@ language: ruby
 rvm:
   - 1.9.3
 before_install:
-  - sudo add-apt-repository ppa:cz.nic-labs/golang
+  - sudo add-apt-repository -y ppa:cz.nic-labs/golang
+  - sudo add-apt-repository -y ppa:chris-lea/node.js
   - sudo apt-get update
   - sudo apt-get -y install build-essential
   - sudo apt-get -y --no-install-recommends install golang-go
   - sudo apt-get -y install openjdk-6-jdk scala groovy
-  - sudo apt-get -y install mono-runtime mono-gmcs mono-vbnc
-  - sudo apt-get -y install haskell-platform erlang nodejs clisp lua5.1 ocaml ocaml-findlib libextlib-ocaml libextlib-ocaml-dev
+  - sudo apt-get -y install mono-runtime mono-gmcs mono-vbnc mono-devel unzip
+  - sudo apt-get -y install haskell-platform erlang clisp lua5.1 ocaml ocaml-findlib libextlib-ocaml libextlib-ocaml-dev
+  - sudo apt-get -y install nodejs npm
+  - sudo npm install -g coffee-script
+  - export CUR_DIR=$PWD
+  - mkdir -p ~/bin; cd ~/bin
+  - wget http://download.microsoft.com/download/6/B/6/6B6BFB83-3D3A-467C-8080-01F7A953A37F/fsharp.zip
+  - unzip fsharp.zip; cd FSharp-2.0.0.0
+  - chmod +x install-mono.sh
+  - ./install-mono.sh
+  - wget -O mono.snk http://github.com/mono/mono/raw/master/mcs/class/mono.snk
+  - sudo ./install-mono.sh; cd $CUR_DIR
 branches:
   only:
     - master

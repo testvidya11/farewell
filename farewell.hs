@@ -1,9 +1,9 @@
 module Main (main) where
 
-import System (getArgs)
+import System.Environment (getArgs)
 import Text.Regex (mkRegex, subRegex, splitRegex)
-import Char (ord, chr)
-import Bits (xor)
+import Data.Char (ord, chr)
+import Data.Bits (xor)
 
 decrypt _ _ [] decrypted = decrypted
 decrypt key index encrypted decrypted = decrypt key (index + 1) (tail encrypted)

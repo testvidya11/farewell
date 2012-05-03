@@ -1,4 +1,4 @@
-CLEAN = %w{*.o *.hi *.pyc *.class *.dec *.enc *.dump *.beam *.cmi *.cmo *.togo farewell Farewell.exe}
+CLEAN = %w{*.o *.hi *.pyc *.class *.dec *.enc *.dump *.beam *.cmi *.cmo *.togo farewell *.exe}
 
 DIFF_COMMAND = "diff -u README.md README.md.dec 2>&1"
 REDIRECT = "README.md.enc > README.md.dec"
@@ -30,6 +30,8 @@ task :default =>  [:farewell_ruby,
                    :farewell_cs,
                    :farewell_vb,
                    :farewell_go,
+                   :farewell_coffee,
+                   :farewell_fs,
                    :clean]
 
 task :encrypt => :clean do
@@ -149,4 +151,17 @@ task :farewell_go => :encrypt do
   `#{linker} -o farewell farewell.togo`
   `./farewell #{REDIRECT}`
   complain? "go"
+end
+
+desc "CoffeeScript Version"
+task :farewell_coffee => :encrypt do
+  `coffee farewell.coffee #{REDIRECT}`
+  complain? "coffee"
+end
+
+desc "FSharp Version"
+task :farewell_fs => :encrypt do
+  `~/bin/FSharp-2.0.0.0/bin/fsc.exe farewell.fs`
+  `./farewell.exe #{REDIRECT}`
+  complain? "fs"
 end
