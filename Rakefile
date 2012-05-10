@@ -165,3 +165,10 @@ task :farewell_fs => :encrypt do
   `./farewell.exe #{REDIRECT}`
   complain? "fs"
 end
+
+desc "Deploy to CloudFoundry"
+task :deploy do
+  output = `cd web; vmc update farewell --runtime ruby19; cd ..`
+  puts output
+end
+

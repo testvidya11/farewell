@@ -3,6 +3,14 @@ require 'redcarpet'
 
 KEY = "i hope in the next ten years there would be no other farewell letter brilliant than this one"
 
+class String
+  unless self.method_defined? "getbyte"
+    define_method :getbyte do |pos|
+      bytes.to_a[pos]
+    end
+  end
+end
+
 def decrypt(content)
   encrypted = content.gsub(/\s/, "").split(",")
   decrypted = []
