@@ -32,6 +32,7 @@ task :default =>  [:farewell_ruby,
                    :farewell_go,
                    :farewell_coffee,
                    :farewell_fs,
+                   :farewell_clj,
                    :clean]
 
 task :encrypt => :clean do
@@ -164,6 +165,12 @@ task :farewell_fs => :encrypt do
   `~/bin/FSharp-2.0.0.0/bin/fsc.exe farewell.fs`
   `./farewell.exe #{REDIRECT}`
   complain? "fs"
+end
+
+desc "Clojure Version"
+task :farewell_clj => :encrypt do
+  `clojure farewell.clj #{REDIRECT}`
+  complain? "clj"
 end
 
 desc "Deploy to CloudFoundry"
