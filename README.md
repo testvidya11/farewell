@@ -100,6 +100,10 @@ and finally compare README.md with README.md.dec.
 1. `fsc farewell.fs`
 2. `./farewell.exe </path/to/encrypted/file>`
 
+## farewell.clj
+
+`clojure farewell.clj </path/to/encrypted/file>`
+
 # Web Version
 
 1. `bundle install`
