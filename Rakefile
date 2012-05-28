@@ -17,6 +17,7 @@ task :default =>  [:farewell_ruby,
                    :farewell_python,
                    :farewell_java,
                    :farewell_scala,
+                   :farewell_dsl_scala,
                    :farewell_c,
                    :farewell_haskell,
                    :farewell_perl,
@@ -65,6 +66,12 @@ desc "Scala Version"
 task :farewell_scala => :encrypt do
   `scala farewell.scala #{REDIRECT}`
   complain? "scala"
+end
+
+desc "Scala DSL Version"
+task :farewell_dsl_scala => :encrypt do
+  `scala farewell_dsl.scala #{REDIRECT}`
+  complain? "scala_dsl"
 end
 
 desc "C Version"

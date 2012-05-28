@@ -44,6 +44,10 @@ and finally compare README.md with README.md.dec.
 
 `scala farewell.scala </path/to/encrypted/file>`
 
+## farewell_dsl.scala
+
+`scala farewell_dsl.scala </path/to/encrypted/file>`
+
 ## farewell.hs
 
 1. `ghc --make farewell.hs`
