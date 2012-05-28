@@ -9,7 +9,9 @@ before_install:
   - sudo apt-get -y --no-install-recommends install golang-go
   - sudo apt-get -y install openjdk-6-jdk scala groovy
   - sudo apt-get -y install mono-runtime mono-gmcs mono-vbnc mono-devel unzip
-  - sudo apt-get -y install haskell-platform erlang clisp lua5.1 ocaml ocaml-findlib libextlib-ocaml libextlib-ocaml-dev clojure
+  - sudo apt-get -y install haskell-platform erlang clisp lua5.1
+  - sudo apt-get -y install ocaml ocaml-findlib libextlib-ocaml libextlib-ocaml-dev
+  - sudo apt-get -y install clojure
   - sudo apt-get -y install nodejs npm
   - sudo npm install -g coffee-script
   - export CUR_DIR=$PWD
