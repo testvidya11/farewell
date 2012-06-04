@@ -7,11 +7,6 @@ def complain?(which)
   fail "#{which} version sucks" unless `#{DIFF_COMMAND}`.empty?  
 end
 
-desc "Clean"
-task :clean do
-  CLEAN.each { |f| `rm -f #{f}`}
-end
-
 desc "One Shot"
 task :default =>  [:farewell_ruby,
                    :farewell_python,
@@ -35,6 +30,11 @@ task :default =>  [:farewell_ruby,
                    :farewell_fs,
                    :farewell_clj,
                    :clean]
+
+desc "Clean"
+task :clean do
+  CLEAN.each { |f| `rm -f #{f}`}
+end
 
 task :encrypt => :clean do
   `ruby encrypt.rb README.md > README.md.enc`
