@@ -76,3 +76,5 @@ I will keep you informed after.
 
 This letter has already been too long, so I'm finishing it and closing discussion as well. You can
 always reach me on social webs besides from within ECN. So please check below ↓↓↓↓↓↓↓↓
+
+> honnix@facebook, honnix@twitter, honnix@weibo
