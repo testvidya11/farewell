@@ -51,8 +51,8 @@ in a team. In any sense, he is one of my best guide ever.
 If I really need to work out an acknowledgement list, it would be just too long to fit into one
 file, and I'm afraid everybody will ask me to do refactoring, in one way or another. So, instead
 of doing such a tedious thing, I would like to take this opportunity to thank all of you. Without
-you, I will inevitably delay all my DPs, give wrong solution to all TRs, and report time to all
-wrong network codes.
+you, I will inevitably delay my DPs, give wrong solution to TRs, and report time to wrong network
+codes, etc, etc.
 
 __Thank you very much!__
 
