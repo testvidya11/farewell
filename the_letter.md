@@ -2,12 +2,12 @@
 
 It has been a long time since I planned to write this farewell letter, but due to
 my procrastination, it has been delayed ever since then. While things foreseen to
-happen will eventually happen, I have no execute to finish it now.
+happen will eventually happen, I have no execute but to finish it now.
 
 # A Geek's Way
 
 Forgive me that I'm writing it in this way, but since I do believe I am a so-called
-geek, I'd rather say _goodbye in my own way. So if you feel any offence in any kind,
+geek, I'd rather say _goodbye_ in my own way. So if you feel any offence in any kind,
 I apologize for that, sincerely.
 
 # Looking back
@@ -40,7 +40,7 @@ As my story, I've been working in only one team which is Ganjiang. I once wrote 
 the team when last time we were awarded as best team yearly. I won't repeat it, but I want to say it is really
 a great team to work in. BTW, whether you believe it or not, the unofficial afternoon team break was
 originally imported by Ganjiang from Karlskrona, when we were intentionally misusing the Swedish word
-[`fika`](http://en.wikipedia.org/wiki/Fika_\(coffee_break\)).
+[`Fika`](http://en.wikipedia.org/wiki/Fika_\(coffee_break\)).
 
 The man whose name has something to do with rock or rocket taught me quite a lot on how to work
 in a team. In any sense, he is one of my best guide ever.
@@ -71,9 +71,11 @@ I will be keeping using `ehonlia` as my ID, while might change email address a l
 to ease the pronunciation and written effort for my new colleagues. If you do not mind an email spam,
 I will keep you informed after.
 
+Finally, wish all of you every good day in your life.
+
 # Follow Me on Social Webs
 
 This letter has already been too long, so I'm finishing it and closing discussion as well. You can
 always reach me on social webs besides from within ECN. So please check below ↓↓↓↓↓↓↓↓
 
-> honnix@facebook, honnix@twitter, honnix@weibo
+> honnix@facebook（需翻）, honnix@twitter（需翻）, honnix@weibo
