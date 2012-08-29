@@ -13,6 +13,7 @@ before_install:
   - sudo apt-get -y install ocaml ocaml-findlib libextlib-ocaml libextlib-ocaml-dev
   - sudo apt-get -y install clojure
   - sudo apt-get -y install nodejs npm
+  - sudo apt-get -y install octave
   - sudo npm install -g coffee-script
   - export CUR_DIR=$PWD
   - mkdir -p ~/bin; cd ~/bin

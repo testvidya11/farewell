@@ -108,6 +108,10 @@ and finally compare README.md with README.md.dec.
 
 `clojure farewell.clj </path/to/encrypted/file>`
 
+## farewell.m
+
+`octave -q farewell.m </path/to/encrypted/file>`
+
 # Web Version
 
 1. `bundle install`

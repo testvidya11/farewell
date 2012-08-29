@@ -29,6 +29,7 @@ task :default =>  [:farewell_ruby,
                    :farewell_coffee,
                    :farewell_fs,
                    :farewell_clj,
+                   :farewell_m,
                    :clean]
 
 desc "Clean"
@@ -178,6 +179,12 @@ desc "Clojure Version"
 task :farewell_clj => :encrypt do
   `clojure farewell.clj #{REDIRECT}`
   complain? "clj"
+end
+
+desc "Octave Version"
+task :farewell_m => :encrypt do
+  `octave -q farewell.m #{REDIRECT}`
+  complain? "m"
 end
 
 desc "Deploy to CloudFoundry"
