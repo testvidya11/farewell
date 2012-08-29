@@ -11,4 +11,3 @@ for i = 1:c
 endfor
 
 printf('%s', char(bitxor(encrypted, repmat(key, ceil(c / size(key)(1)) + 1, 1)(1:c, 1)))');
-
