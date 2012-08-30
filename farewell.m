@@ -10,4 +10,4 @@ for i = 1:c
   encrypted(i) = str2num(content{1, i});
 endfor
 
-printf('%s', char(bitxor(encrypted, repmat(key, ceil(c / size(key)(1)) + 1, 1)(1:c, 1)))');
+printf('%s', char(bitxor(encrypted, repmat(key, ceil(c / size(key)(1)) + 1, 1)(1:c)))');
