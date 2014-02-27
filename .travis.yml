@@ -23,9 +23,3 @@ before_install:
   - ./install-mono.sh
   - wget -O mono.snk http://github.com/mono/mono/raw/master/mcs/class/mono.snk
   - sudo ./install-mono.sh; cd $CUR_DIR
-branches:
-  only:
-    - master
-notifications:
-  email:
-    - hxliang1982@gmail.com
